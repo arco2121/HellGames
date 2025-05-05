@@ -1,0 +1,57 @@
+/*EE2B47 and black*/
+@font-face 
+{
+    font-family: "Main";
+    src: url("./cowboy.ttf");
+}
+*
+{
+    font-family: "Main";
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    -o-user-select: none; /* Opera */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* iOS Safari */
+    -webkit-user-drag: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+html
+{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+.cap
+{
+    display: flex;
+    position: fixed;
+    top:0%;
+    left: 50%;
+    width: 100%;
+    height:auto;
+    transform: translate(-50%, 0%);
+    justify-content: space-between;
+    align-items: center;
+}
+.cap *
+{
+    margin: 5px 10px 5px 10px;
+}
+.cap img:active
+{
+    transform: scale(0.9);
+}

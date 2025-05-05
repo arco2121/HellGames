@@ -1,0 +1,73 @@
+.gamecon
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: dotted 5px #EE2B47;
+    animation: appear 0.4s ease-in-out;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #EE2B47;
+}
+.gamecon:active
+{
+    transform: scale(0.95);
+}
+.gamecon img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: solid 5px #EE2B47;
+    margin: 10px;
+    object-fit: cover;
+    background-color: black;
+}
+.gamemincon
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: solid 2px #EE2B47;
+    margin: 15px;
+    animation: appear 0.4s ease-in-out;
+    padding: 10px;
+}
+.gamemincon *
+{
+    margin: 10px;
+}
+.gamemincon img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    border:  solid 2px #EE2B47;
+    margin: 10px;
+    object-fit: cover;
+}
+.gamemincon:active
+{
+    transform: scale(0.98);
+}
+@media screen and (orientation: portrait)
+{
+    .cont
+    {
+        flex-direction: column;
+    }
+}
+.fg
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:dotted 8px white;
+    border-radius: 25px;
+    padding: 20px;
+    animation: appear 0.4s ease-in-out;
+}

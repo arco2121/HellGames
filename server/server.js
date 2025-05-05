@@ -2,6 +2,8 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const ejs = require('ejs');
+const path = require('path');
+
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -9,7 +11,10 @@ const link =  "127.1.0.0"; //Given Domain
 const getURL = (uri = "",secure = false) => {
     if(link == "127.1.0.0" || link == "localhost")
         secure = false;
-    return "http" + secure?"s":"" + "://" + ip + ":" + port + "/" + uri
+    let st = "http"  
+    if(secure)
+        st = "https"
+    return st + "://" + link + ":" + port + "/" + uri
 }
 const corsOptions = {
   origin: "*",
@@ -31,7 +36,8 @@ db.connect((err) => {
 });
 
 app.set('view engine', 'ejs');
-app.use(express.static("./public"));
+app.set('views', path.join(__dirname, '..', 'public'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -93,5 +99,6 @@ app.use((req, res, next) => {
 });
 
 app.listen(port,()=>{
-    console.log(`Server is running on port ${port} and link ${getURL()}`);
+    console.log("Server is running on port " + port);
+    console.log("Server URL: " + getURL())
 })

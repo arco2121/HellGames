@@ -1,5 +1,12 @@
-document.querySelectorAll("img").forEach((img) => {
+document.querySelectorAll(".gp").forEach((img) => {
     img.onerror = () => {
-        document.getElementById("gametop").src = "./img/hellgames.png";
+        img.src = "./img/key.png";
     }
+})
+
+document.getElementById("logo").addEventListener("click", () => {
+    window.location.href = "/";
+})
+document.getElementById("search").addEventListener("click", () => {
+    window.location.href = "/s/";
 })

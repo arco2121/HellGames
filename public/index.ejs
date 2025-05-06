@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell Games</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="icon" href="./img/logo.png">
+</head>
+<body>
+    <div class="cap">
+        <div class="cap_logo">
+            <img src="./img/logo.png" alt="Hell Games Logo" height="65" id="logo">
+        </div>
+        <div class="cap_lof">
+            <img src="./img/search.png" alt="login" height="50" alt="search" id="search">
+            <img src="./img/key.png" alt="login" height="50" alt="Login" id="login">
+        </div>
+    </div>
+    <div class="cont">
+        <div class="sez">
+            <h2>Suggested Game</h2>
+            <div class="gamecon">
+                <div class="half">
+                    <img src="./img/<%= game.id %>.png" alt="Game" class="gp">
+                </div>
+                <div class="half">
+                    <h2><%= game.name %></h2>
+                    <h5><%= game.mini_description %></h5>
+                </div>
+            </div>
+        </div>
+        <div class="sez">
+            <div class="row">
+                <h2>Top Games</h2>
+                <a style="color: #EE2B47; text-decoration: none;" href="/games">See all</a>
+            </div>
+            <div class="fg">
+                <% games.forEach(function(game) { %>
+                    <div class="gamemincon">
+                        <img src="./img/<%= game.id %>.png" alt="Game" class="gameimg">
+                        <h3><%= game.name %></h3>
+                        <h3><%= game.rating %></h3>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="sez">
+            <h4>Hell Games | devcolombaramarco@gmail.com</h4>
+            <h6>© 2025 Hell Games. All rights reserved.</h6>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

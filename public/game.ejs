@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= game.name %> | Hell Games</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/game.css">
+    <link rel="icon" href="./img/logo.png">
+</head>
+<body>
+    <div class="cap">
+        <div class="cap_logo">
+            <a href="/">
+                <img src="./img/logo.png" alt="Hell Games Logo" height="65" id="logo">
+            </a>
+        </div>
+        <div class="cap_lof">
+            <img src="./img/search.png" alt="Search" height="50" id="search">
+            <img src="./img/key.png" alt="Login" height="50" id="login">
+        </div>
+    </div>
+
+    <div class="cont game-page">
+        <div class="game-header">
+            <img src="./img/<%= game.id %>.png" alt="<%= game.name %>" class="gp main-game-img">
+            <div class="game-info">
+                <h1><%= game.name %></h1>
+                <p class="desc"><%= game.description || game.mini_description %></p>
+                <p><strong>Type:</strong> <%= game.type || "Unknown" %></p>
+                <p><strong>Rating:</strong> <%= game.rating %>/5</p>
+            </div>
+        </div>
+        <div class="game-actions">
+            <a href="/s/" class="btn back">← Back to all games</a>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="sez">
+            <h4>Hell Games | devcolombaramarco@gmail.com</h4>
+            <h6>© 2025 Hell Games. All rights reserved.</h6>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

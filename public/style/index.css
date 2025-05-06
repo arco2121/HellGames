@@ -18,6 +18,7 @@
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     z-index: 0;
+    text-align: center;
 }
 *::-webkit-scrollbar
 {
@@ -71,14 +72,13 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100%;
     width: 100%;
-    margin: 20px;
+    min-height: 100%;
+    margin-bottom: 20px;
 }
-.cap_lof
+.cont *
 {
-    border: dotted 2px #EE2B47;
-    border-radius: 20px;
+    margin: 10px;
 }
 .sez
 {
@@ -87,7 +87,7 @@ body
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
 }
 .half
@@ -118,4 +118,10 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+@media screen and (orientation:portrait) {
+    .cont
+    {
+        margin-top: 125px;
+    }
 }
